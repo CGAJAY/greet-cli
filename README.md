@@ -212,7 +212,35 @@ You cannot have both `package main` and `package greet` in the **same folder**, 
 ├── main.go // package main
 └── greet.go // package greet (❌ cannot live in the same folder as main)
 
-## 📌 12. Summary of Key Points
+---
+
+## 12. Module Path Must Match Your GitHub Repo
+
+In Go, the **module path** written at the top of your `go.mod` file must match the **repository URL** where your project lives.
+
+For example:
+
+-   If your GitHub repo is at:
+
+```go
+https://github.com/CGAJAY/go-greet
+```
+
+-   Then your `go.mod` should start with:
+
+```go
+module github.com/CGAJAY/go-greet
+```
+
+If they don’t match, Go tools (like go get or when others import your package) will get confused.
+
+Think of it like an address:
+
+-   go.mod is your official home address.
+-   GitHub repo URL is your actual house.
+-   They must match so visitors (and Go itself) can find you correctly.
+
+## 📌 13. Summary of Key Points
 
 -   **GOROOT** → Where Go is installed (`/usr/local/go`).
 -   **GOPATH** → Workspace for your projects & binaries (`~/go`).
