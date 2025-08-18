@@ -1,0 +1,19 @@
+# Ignore compiled binaries
+*.exe
+*.out
+*.o
+*.a
+*.so
+greet
+
+# Ignore build folders
+/bin/
+/build/
+/dist/
+
+# OS-specific ignores
+.DS_Store
+Thumbs.db
+
+
+
